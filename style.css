@@ -378,7 +378,7 @@ a {
 .contact-flex {
   flex-wrap: wrap;
 }
-.lagos {
+.lagos, .abuja {
   width: 50%;
 }
 
@@ -411,6 +411,7 @@ a {
 
 .faq-box {
   display: flex;
+  flex-direction: column;
   gap: 15px;
   font-size: 12px;
   padding: 10px 0;
@@ -418,18 +419,34 @@ a {
   margin-left: 10px;
 }
 
-.faq-box .body {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .faq-box .title {
   font-weight: 600;
+  font-size: 12px;
+  
 }
 
-.faq-box .answer {
-  font-weight: 100px;
+.accordion {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  transition: 0.4s;
+}
+
+.answer {
+  font-weight: 300;
+  padding-left: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  background-color: white;
 }
 
 /* Media queries */
